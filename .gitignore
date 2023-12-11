@@ -34,3 +34,24 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# entorno virtual
+venv/
+
+# archivos compilados de Python
+*.pyc
+__pycache__/
+
+# bases de datos locales de SQLite
+*.sqlite3
+*.db
+
+# carpetas de caché de Python
+__pycache__/
+
+# archivos de configuración del sistema operativo
+.DS_Store # Para macOS
+Thumbs.db # Para Windows
+
+# Archivos de log
+*.log
