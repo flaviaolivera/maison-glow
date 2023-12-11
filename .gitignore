@@ -55,3 +55,6 @@ Thumbs.db # Para Windows
 
 # Archivos de log
 *.log
+
+# Archivo de configuración local que no se debe compartir
+.env
