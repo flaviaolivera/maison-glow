@@ -15,8 +15,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from accounts.views import signup, login_view
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Agrega las URL de cuentas (registro e inicio de sesión)
+    path('glow-signup/', signup, name='signup'),  # URL de registro
+    path('glow-login/', login_view, name='login'),  # URL de inicio de sesión
 ]
