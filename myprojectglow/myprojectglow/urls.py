@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from accounts.views import signup, login_view
+from django.views.generic.base import RedirectView
 
 
 urlpatterns = [
@@ -24,4 +25,5 @@ urlpatterns = [
     # Agrega las URL de cuentas (registro e inicio de sesión)
     path('glow-signup/', signup, name='signup'),  # URL de registro
     path('glow-login/', login_view, name='login'),  # URL de inicio de sesión
+    path('', RedirectView.as_view(url='/glow-login/', permanent=True)),  # Redirigir la ruta raíz a '/glow-login/'
 ]

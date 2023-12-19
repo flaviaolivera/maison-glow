@@ -1,0 +1,16 @@
+<!-- accounts/templates/accounts/signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+</head>
+<body>
+    <h2>Registro</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Registrarse</button>
+    </form>
+</body>
+</html>
